@@ -1,0 +1,90 @@
+:root {
+  --main-font-family: 'Noto Sans JP', sans-serif;
+  --pink-color: #f38181;
+  --yellow-color: hsl(47, 95%, 76%);
+  --green-color: hsl(87, 100%, 91%, 0.3);
+  --blue-color: hsl(169, 56%, 73%, 0.3);
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--main-font-family);
+}
+
+li {
+  display: inline-block;
+  top: 0px;
+  list-style: none;
+}
+
+#header {
+  position: sticky;
+  top: 0px;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--yellow-color);
+  color: var(--pink-color);
+}
+
+.logo {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.nav_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav_lists {
+  padding: 0;
+}
+.nav_container li {
+  margin: 0 8px 0 8px;
+}
+
+.socialnetwork {
+  margin-right: 20px;
+  font-size: 20px;
+}
+.socialnetwork li {
+  margin: 0 3px 0 3px;
+}
+
+.main-1 {
+  background-color: var(--blue-color);
+}
+
+.main-2 {
+  background-color: var(--green-color);
+}
+
+.main-3 {
+  background-color: var(--blue-color);
+}
+
+.main-4 {
+  background-color: var(--green-color);
+}
+
+.main-5 {
+  background-color: var(--blue-color);
+}
+
+#footer {
+  text-align: center;
+  padding: 10px 0 10px 0;
+  font-size: 12px;
+  bottom: 0px;
+}
