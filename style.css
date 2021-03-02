@@ -12,6 +12,9 @@ body {
   font-family: var(--main-font-family);
 }
 
+ul {
+  padding-left: 0;
+}
 li {
   display: inline-block;
   top: 0px;
@@ -24,7 +27,7 @@ li {
   width: 100vw;
   margin: 0;
   padding: 0;
-  height: 80px;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -35,8 +38,9 @@ li {
 
 .logo {
   display: flex;
-  width: 80px;
-  height: 80px;
+  width: 5vw;
+  height: auto;
+  margin-left: 15px;
   justify-content: center;
   align-items: center;
   font-size: 30px;
@@ -51,14 +55,16 @@ li {
 .nav_lists {
   padding: 0;
 }
+
 .nav_container li {
   margin: 0 8px 0 8px;
 }
 
 .socialnetwork {
-  margin-right: 20px;
   font-size: 20px;
+  margin-right: 20px;
 }
+
 .socialnetwork li {
   margin: 0 3px 0 3px;
 }
@@ -111,20 +117,46 @@ li {
 }
 
 @media screen and (max-width: 816px) {
-  .socialnetwork {
+  #greeting {
     display: none;
   }
 
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  ul {
+    margin: 0 0 8px 0;
+  }
   .nav_container {
     display: none;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .nav_lists {
+    display: flex;
     flex-direction: column;
   }
 
+  .nav_lists li {
+    margin: 2px 0 2px 0;
+    text-align: center;
+  }
+  .socialnetwork {
+    display: none;
+  }
   .bar {
     display: block;
-    margin-right: 20px;
   }
-  #greeting {
-    display: none;
+  .nav_container.nav_active {
+    transition: all 0.07s;
+
+    display: flex;
+  }
+  .bar {
+    position: absolute;
+    right: 20px;
+    color: inherit;
   }
 }
