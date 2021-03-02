@@ -1,5 +1,6 @@
 :root {
   --main-font-family: 'Noto Sans JP', sans-serif;
+  --type-font-family: 'Frank Ruhl Libre', serif;
   --pink-color: #f38181;
   --yellow-color: hsl(47, 95%, 76%);
   --green-color: hsl(87, 100%, 91%, 0.3);
@@ -62,6 +63,26 @@ li {
   margin: 0 3px 0 3px;
 }
 
+.bar {
+  display: none;
+}
+
+#greeting {
+  text-align: center;
+}
+
+.greeting-message {
+  font-weight: 100;
+  font-family: var(--type-font-family);
+  padding: 0;
+}
+
+#main {
+  width: 80vw;
+  margin: auto;
+  margin-top: 20px;
+}
+
 .main-1 {
   background-color: var(--blue-color);
 }
@@ -87,4 +108,23 @@ li {
   padding: 10px 0 10px 0;
   font-size: 12px;
   bottom: 0px;
+}
+
+@media screen and (max-width: 816px) {
+  .socialnetwork {
+    display: none;
+  }
+
+  .nav_container {
+    display: none;
+    flex-direction: column;
+  }
+
+  .bar {
+    display: block;
+    margin-right: 20px;
+  }
+  #greeting {
+    display: none;
+  }
 }
