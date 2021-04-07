@@ -5,8 +5,6 @@
 const greeting_message = "Hello there I'm Jihye I'm looking for a developer job!";
 const greeting_message_container = document.querySelector('.greeting-message');
 
-let type_message = '';
-
 let i = 0;
 let strArr = greeting_message.toUpperCase().split('').map(elem => elem == " " ? "_" : elem); //HELLO_
 let emptyStr = '';
@@ -108,3 +106,10 @@ click_contact.addEventListener('click', ()=> {
   roadmap_main.style.display = 'none';
   contact_main.style.display = 'block';
 })
+
+// Submit event
+
+const contact_sections = document.querySelector('.contact_sections')
+document.getElementById("submit_btn").addEventListener('click', () => {
+  contact_sections.innerHTML = `thank you for submitting your query. I will get back to you shortly`;
+});
