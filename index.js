@@ -57,21 +57,31 @@ btn.addEventListener('click', () => {
 
 // changing main
 
-
+const click_home = document.querySelector('.home a');
 const click_about = document.querySelector('.about a');
 const click_pf = document.querySelector('.portfolio a');
 const click_why = document.querySelector('.why a');
 const click_roadmap = document.querySelector('.roadmap a');
 const click_contact = document.querySelector('.contact a');
 
-const about_main = document.querySelector('.about_main')
-const pf_main = document.querySelector('.portfolio_main')
-const why_main = document.querySelector('.why_main')
-const roadmap_main = document.querySelector('.roadmap_main')
-const contact_main = document.querySelector('.contact_main')
+const home_main = document.querySelector('.home_main');
+const about_main = document.querySelector('.about_main');
+const pf_main = document.querySelector('.portfolio_main');
+const why_main = document.querySelector('.why_main');
+const roadmap_main = document.querySelector('.roadmap_main');
+const contact_main = document.querySelector('.contact_main');
 
 
+click_home.addEventListener('click', ()=> {
+  home_main.style.display = 'block';
+  about_main.style.display = 'none';
+  pf_main.style.display = 'none';
+  why_main.style.display = 'none';
+  roadmap_main.style.display = 'none';
+  contact_main.style.display = 'none';
+})
 click_about.addEventListener('click', ()=> {
+  home_main.style.display = 'none';
   about_main.style.display = 'block';
   pf_main.style.display = 'none';
   why_main.style.display = 'none';
@@ -79,6 +89,7 @@ click_about.addEventListener('click', ()=> {
   contact_main.style.display = 'none';
 })
 click_pf.addEventListener('click', ()=> {
+  home_main.style.display = 'none';
   about_main.style.display = 'none';
   pf_main.style.display = 'block';
   why_main.style.display = 'none';
@@ -86,6 +97,7 @@ click_pf.addEventListener('click', ()=> {
   contact_main.style.display = 'none';
 })
 click_why.addEventListener('click', ()=> {
+  home_main.style.display = 'none';
   about_main.style.display = 'none';
   pf_main.style.display = 'none';
   why_main.style.display = 'block';
@@ -93,6 +105,7 @@ click_why.addEventListener('click', ()=> {
   contact_main.style.display = 'none';
 })
 click_roadmap.addEventListener('click', ()=> {
+  home_main.style.display = 'none';
   about_main.style.display = 'none';
   pf_main.style.display = 'none';
   why_main.style.display = 'none';
@@ -100,6 +113,7 @@ click_roadmap.addEventListener('click', ()=> {
   contact_main.style.display = 'none';
 })
 click_contact.addEventListener('click', ()=> {
+  home_main.style.display = 'none';
   about_main.style.display = 'none';
   pf_main.style.display = 'none';
   why_main.style.display = 'none';
@@ -109,7 +123,31 @@ click_contact.addEventListener('click', ()=> {
 
 // Submit event
 
-const contact_sections = document.querySelector('.contact_sections')
-document.getElementById("submit_btn").addEventListener('click', () => {
-  contact_sections.innerHTML = `thank you for submitting your query. I will get back to you shortly`;
+const submit_msg = document.querySelector(".submit_msg");
+
+document.getElementById("submit_btn").addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  // submit_msg.innerHTML = `Thank you for submitting your query. I will get back to you shortly.`
 });
+
+
+
+// connecting video
+
+const video_list = document.querySelectorAll('.video_nav img');
+
+function getvideoUrl(url) {
+  document.getElementById('video_carousel').src = url;
+}
+
+video_list[0].addEventListener('click', () => {
+  getvideoUrl('video/coordinates.mp4');
+});
+video_list[1].addEventListener('click', () => {
+  getvideoUrl('video/carrot_game.mp4');
+});
+video_list[2].addEventListener('click', () => {
+  getvideoUrl('video/shopping_list.mp4');
+});
+

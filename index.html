@@ -30,9 +30,10 @@
       </div>
       <div class="nav_container">
         <ul class="nav_lists">
+          <li class="home"><a href="#">Home</a></li>
           <li class="about"><a href="#">About me</a></li>
           <li class="portfolio"><a href="#">Portfolio</a></li>
-          <li class="why"><a href="#">Why Coing?</a></li>
+          <li class="why"><a href="#">Why FAC?</a></li>
           <li class="roadmap"><a href="#">Roadmap</a></li>
           <li class="contact"><a href="#">Contact</a></li>
         </ul>
@@ -48,10 +49,22 @@
         <i class="fas fa-bars"></i>
       </a>
     </header>
-    <section id="greeting">
-      <p class="greeting-message"></p>
-    </section>
+
     <section id="main">
+      <div class="home_main main-0">
+        <p class="greeting-message"></p>
+        <div class="video_container">
+          <video id="video_carousel" autoplay loop>
+            <source src="video/coordinates.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div class="img_container">
+        <ul class="video_nav">
+          <li class="video_1"><img src="/video/coordinates.png" alt=""></li>
+          <li><img src="/video/carrot_game.png" alt=""></li>
+          <li><img src="/video/shoppinglist.png" alt=""></li>
+        </ul>
+      </div>
       <div class="about_main main-1 main_hidden">
         <p>About
       </div>
@@ -73,25 +86,26 @@
        roadmap
       </div>
       <div class="contact_main main-5 main_hidden">
-
+        <div class="submit_msg"></div>
+        <form action="">
           <ul class="contact_sections">
             <li>
               <label for="first_name">
                 First name
               </label>
-              <input type="text">
+              <input type="text" required>
             </li>
             <li>
               <label for="last_name">
                 Last name
               </label>
-              <input type="text">
+              <input type="text" required>
             </li>
             <li>
               <label for="email_address">
                 Email address
               </label>
-              <input type="text">
+              <input type="text" required>
             </li>
             <li class="contact_msg">
               <label for="message">
@@ -105,7 +119,7 @@
             </li>
           </ul>
 
-          
+        </form>  
       </div>
     </section>
     <footer id="footer">Jihye Pak <i class="far fa-copyright"></i> 2021</footer>
