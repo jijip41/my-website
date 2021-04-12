@@ -168,12 +168,40 @@ a:visited {
   height: 60px;
   cursor: pointer;
   border: solid 1px var(--white-color);
-  transition: 0.5s;
+  transition: 0.5s ;
 }
 
 .img_container img:hover{
   width: 90px;
   height: 65px;
+}
+
+.about_main ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 70px 10px 50px 10px;
+}
+
+.about_img img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.about_main p {
+  width: 80%;
+  height: auto;
+  background-color: var(--green-color);
+  margin: auto;
+  margin-bottom: 30px;
+  text-align: justify;
+  overflow: scroll;
+}
+
+.about_main li {
+  margin: 0;
 }
 
 
@@ -204,8 +232,6 @@ section label {
 .submit_btn {
   text-align: center;
 }
-
-
 
 #footer {
   text-align: center;
