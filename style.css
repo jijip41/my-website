@@ -134,10 +134,12 @@ a:visited {
 .video_container{
   position: relative;
   margin: auto;
-  width: 400px;
-  height: 300px;
+  width: 600px;
+  height: 400px;
   margin-top: 50px;
   overflow: scroll;
+  box-shadow: 1px 1px 2px 1px black;
+
 }
 
 .video_container video {
@@ -147,7 +149,6 @@ a:visited {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.6;
 }
 
 .img_container {
@@ -184,20 +185,39 @@ a:visited {
 }
 
 .about_img img{
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   cursor: pointer;
+  box-shadow: 1px 1px 2px 3px var(--white-color);
+
+}
+
+.fa-quote-left{
+  padding-left: 50px;
+}
+
+.fa-quote-right{
+  text-align: right;
+  padding: 0 50px 20px 0;
+}
+
+
+.about_main .about_text {
+  display: flex;
+  flex-direction: column;
 }
 
 .about_main p {
   width: 80%;
-  height: auto;
+  height: 200px;
   background-color: var(--green-color);
   margin: auto;
   margin-bottom: 30px;
-  text-align: justify;
+  text-align: center;
   overflow: scroll;
+  display: flex;
+  align-items: center;
 }
 
 .about_main li {
@@ -284,4 +304,23 @@ section label {
     right: 20px;
     color: inherit;
   }
+
+  .video_container{
+    position: relative;
+    margin: auto;
+    width: 400px;
+    height: 300px;
+    margin-top: 50px;
+    overflow: scroll;
+  }
+  
+  .video_container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
 }
