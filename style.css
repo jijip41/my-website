@@ -137,7 +137,7 @@ a:visited {
   width: 600px;
   height: 400px;
   margin-top: 50px;
-  overflow: scroll;
+  overflow: hidden;
   box-shadow: 1px 1px 2px 1px black;
 
 }
@@ -154,7 +154,7 @@ a:visited {
 .img_container {
   width: 300px;
   height: 100px;
-  overflow: scroll;
+  overflow: hidden;
   margin: auto;
 }
 
@@ -210,12 +210,13 @@ a:visited {
 
 .about_main p {
   width: 80%;
-  height: 200px;
+  height: 280px;
+  font-size: 14px;
   background-color: var(--green-color);
   margin: auto;
   margin-bottom: 30px;
   text-align: center;
-  overflow: scroll;
+  overflow: hidden;
   display: flex;
   align-items: center;
 }
