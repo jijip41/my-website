@@ -219,10 +219,45 @@ padding: 0 0 0 10%;
   display: block;
 }
 
+.requirement_main ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.requirement_main li {
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.requirement_main div {
+  padding: 10px;
+  margin: 20px 20px 0 20px;
+  text-align: center;
+}
+
+.req_title {
+  background-color:var(--blue-color);
+  border-radius: 0 50px 0 0;
+}
+
+.fa-arrow-circle-down{
+  font-size: 20px;
+}
+
+.req_tick {
+  padding: 10px;
+  margin: 20px 20px 0 20px;
+  text-align: center;
+  background-color: var(--green-color);
+  border-radius: 0 0 0 50px;
+}
+
 .contact_main {
   padding-top: 20px;
 }
-
 
 .contact_sections {
   display: flex;
