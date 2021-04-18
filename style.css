@@ -32,6 +32,7 @@ li {
 
 a {
   text-decoration: none;
+  color: var(--pink-color);
 }
 
 #header {
