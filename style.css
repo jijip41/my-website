@@ -240,8 +240,27 @@ padding: 0 0 0 10%;
 }
 
 .req_title {
-  background-color:var(--blue-color);
-  border-radius: 0 50px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.req_title p{
+  font-weight: bold;
+  border-radius: 0 25px 0 0;
+  height: 7vh;
+  background-image: linear-gradient(to right, rgb(193, 237, 243) 0%, pink 51%,  rgb(193, 227, 243) 100%);
+  transition: 0.2s;
+  background-size: 200% auto;
+  width: 50%;
+  margin: auto auto 20px auto ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.req_title p:hover {
+  background-position: right center;
+  cursor: pointer;
 }
 
 .fa-arrow-circle-down{
