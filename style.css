@@ -227,7 +227,7 @@ padding: 0 0 0 10%;
 }
 
 .requirement_main li {
-  width: 40%;
+  width: 30vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -235,34 +235,41 @@ padding: 0 0 0 10%;
 
 .requirement_main div {
   padding: 10px;
-  margin: 20px 20px 0 20px;
   text-align: center;
 }
 
 .req_title {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 70vh;
 }
 
-.req_title p{
+.req_title_name{
   font-weight: bold;
   border-radius: 0 25px 0 0;
   height: 7vh;
-  background-image: linear-gradient(to right, rgb(193, 237, 243) 0%, pink 51%,  rgb(193, 227, 243) 100%);
+  background-image: linear-gradient(to right, rgb(193, 237, 243) 0%, rgb(248, 195, 204) 51%,  rgb(193, 227, 243) 100%);
   transition: 0.2s;
   background-size: 200% auto;
   width: 50%;
-  margin: auto auto 20px auto ;
+  margin: auto auto 0 auto ;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.req_title p:hover {
+.req_title_name:hover {
   background-position: right center;
   cursor: pointer;
 }
 
+.dotted_box {
+  width: 60%;
+  height: 90%;
+  margin: 0 auto auto auto;
+  border: dotted 2px rgb(248, 195, 204);
+}
 .fa-arrow-circle-down{
   font-size: 20px;
 }
