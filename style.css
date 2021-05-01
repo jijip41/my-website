@@ -270,8 +270,24 @@ padding: 0 0 0 10%;
   margin: 0 auto auto auto;
   border: dotted 2px rgb(248, 195, 204);
 }
-.fa-arrow-circle-down{
-  font-size: 20px;
+
+
+.fa-arrow-circle-down {
+  margin: 5px 0 5px 0;
+}
+.arrow_down1{
+  visibility: hidden;
+  font-size: 24px;
+}
+
+.arrow_down2{
+  visibility: hidden;
+  font-size: 18px;
+}
+
+.arrow_down3{
+  visibility: hidden;
+  font-size: 14px;
 }
 
 .req_tick {

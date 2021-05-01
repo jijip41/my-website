@@ -188,3 +188,17 @@ img_cat.addEventListener('click', () => {
 function getTxt(title) {
   about_txt_container.innerHTML = title;
 }
+
+
+// requirements button event
+
+const reqBtn = document.querySelectorAll(".req_title_name");
+
+reqBtn.forEach(e => e.addEventListener('click', (e) => {
+  setTimeout(() => {document.querySelector(".arrow_down1").style.visibility = 'visible'}, 500);
+  setTimeout(() => {document.querySelector(".arrow_down2").style.visibility = 'visible'}, 1000);
+  setTimeout(() => {document.querySelector(".arrow_down3").style.visibility = 'visible'}, 1500);
+  preventDefault();
+
+})
+);
