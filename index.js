@@ -192,13 +192,25 @@ function getTxt(title) {
 
 // requirements button event
 
-const reqBtn = document.querySelectorAll(".req_title_name");
+const fccReqBtn = document.querySelector(".fcc_title");
+const codeWarsReqBtn = document.querySelector(".codewars_title");
+const gitHubReqBtn = document.querySelector(".github_title");
 
-reqBtn.forEach(e => e.addEventListener('click', (e) => {
-  setTimeout(() => {document.querySelector(".arrow_down1").style.visibility = 'visible'}, 500);
-  setTimeout(() => {document.querySelector(".arrow_down2").style.visibility = 'visible'}, 1000);
-  setTimeout(() => {document.querySelector(".arrow_down3").style.visibility = 'visible'}, 1500);
-  preventDefault();
 
-})
-);
+fccReqBtn.addEventListener('click', (e) => {
+  setTimeout(() => {document.querySelector(".fcc_arrow_down1").style.visibility = 'visible'}, 500);
+  setTimeout(() => {document.querySelector(".fcc_arrow_down2").style.visibility = 'visible'}, 1000);
+  setTimeout(() => {document.querySelector(".fcc_arrow_down3").style.visibility = 'visible'}, 1500);
+});
+
+codeWarsReqBtn.addEventListener('click', (e) => {
+  setTimeout(() => {document.querySelector(".codewars_arrow_down1").style.visibility = 'visible'}, 500);
+  setTimeout(() => {document.querySelector(".codewars_arrow_down2").style.visibility = 'visible'}, 1000);
+  setTimeout(() => {document.querySelector(".codewars_arrow_down3").style.visibility = 'visible'}, 1500);
+});
+
+gitHubReqBtn.addEventListener('click', (e) => {
+  setTimeout(() => {document.querySelector(".github_arrow_down1").style.visibility = 'visible'}, 500);
+  setTimeout(() => {document.querySelector(".github_arrow_down2").style.visibility = 'visible'}, 1000);
+  setTimeout(() => {document.querySelector(".github_arrow_down3").style.visibility = 'visible'}, 1500);
+});
