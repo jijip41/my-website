@@ -3,8 +3,9 @@
   --type-font-family: 'Frank Ruhl Libre', serif;
   --pink-color: #f38181;
   --yellow-color: hsl(47, 95%, 76%);
-  --green-color: hsl(87, 100%, 91%, 0.3);
-  --blue-color: hsl(169, 56%, 73%, 0.3);
+  --green-color: rgb(176, 209, 175);
+  --grey-color:  rgb(160, 136, 136);
+  --blue-color: rgba(103, 170, 182);
   --white-color: #ffffff;
   --main-background: #fde3e2;
   --font-for-main: #000000;
@@ -250,6 +251,8 @@ padding: 0 0 0 10%;
   border-radius: 0 25px 0 0;
   height: 7vh;
   background-image: linear-gradient(to right, rgb(193, 237, 243) 0%, rgb(248, 195, 204) 51%,  rgb(193, 227, 243) 100%);
+  color: var(--grey-color);
+  font-weight: bold;
   transition: 0.2s;
   background-size: 200% auto;
   width: 50%;
@@ -269,36 +272,62 @@ padding: 0 0 0 10%;
   height: 90%;
   margin: 0 auto auto auto;
   border: dotted 2px rgb(248, 195, 204);
+  text-align: center;
 }
 
-
 .fa-arrow-circle-down {
-  margin: 5px 0 5px 0;
-  visibility: hidden;
+  margin: 15px 0 15px 0;
+  visibility: visible;
+  color: var(--grey-color);
+}
+
+.arrow_hidden{
+  opacity: 0;
+}
+.arrow_visible{
+  opacity: 100;
+  transition: opacity 1s ease-in;
 }
 
 .arrow_down1{
-  visibility: hidden;
   font-size: 14px;
-  transition: scale(1.2) 5s;
 }
 
 .arrow_down2{
-  visibility: hidden;
   font-size: 18px;
 }
 
 .arrow_down3{
-  visibility: hidden;
   font-size: 24px;
 }
+.done {
+  color: var(--pink-color);
+  font-weight: bold;
+  opacity: 0;
+}
 
-.req_tick {
-  padding: 10px;
-  margin: 20px 20px 0 20px;
-  text-align: center;
-  background-color: var(--green-color);
-  border-radius: 0 0 0 50px;
+.req_a {
+  opacity: 0;
+}
+
+.done_visible {
+  opacity: 100;
+}
+
+.a_visible {
+  opacity: 100;
+  transform: opacity 0.5s ease-in;
+}
+
+.done i{
+  color: var(--green-color);
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.req_content a{
+  color:var(--grey-color);
+  font-weight: bold;
 }
 
 .contact_main {

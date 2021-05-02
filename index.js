@@ -161,15 +161,15 @@ const img_cat = document.querySelector(".about_img li:nth-child(4)");
 
 const about_txt_container = document.querySelector(".about_text_container");
 
-const seoul = `I was born and raised in <b>South Korea</b>. I was a teacher in my home city of Incheon. While teaching I met my future husband who was working as the only foreign teacher in the school. As he sometimes struggled to understand Korean curture and couldn't find ingredients at the supermarket, I helped him a lot and we became close.<br>After several years together we decided to move to England. So here I am now...`;
+const seoul = `I was born and raised in South Korea. I was a teacher in my home city of Incheon. While teaching I met my future husband who was working as the only foreign teacher in the school. As he sometimes struggled to understand Korean curture and couldn't find ingredients at the supermarket, I helped him a lot and we became close.<br>After several years together we decided to move to England. So here I am now...`;
 
-const six = `I came to the UK <b>6</b> years ago with my husband. I had only visited here on holiday a few times so it was a big step for me to relocate and leave my family and friends behind.<br> When I arrived in England, I began to work as a florist, creating floral arrangements for individuals and events.<br> From there I moved to office-based work, researching and creating reports for Korean SMEs to expand their horizons. This has led me to where I am today, creating web applications with aim of helping others to achieve their digital goals while developing my skillset.`;
+const six = `I came to the UK 6 years ago. I had only visited here on holiday a few times so it was a big step for me to relocate and leave my family and friends behind.<br> When I arrived in England, I began to work as a florist, creating floral arrangements for individuals and events.<br> From there I moved to office-based work, researching and creating reports for Korean SMEs to expand their horizons. This has led me to where I am today, creating web applications with aim of helping others to achieve their digital goals while developing my skillset.`;
 
-const study = `I studied Home Economics Education at university in Seoul. I had decided to learn HEE because everyone told me that being a teacher is good for <b>girls</b> because we can look after family better while we have stable jobs. In addition, I really liked my home economics teacher. She was my role model becuase she was fashionable and looked very cool. <br>
+const study = `I studied Home Economics Education at university in Seoul. I had decided to learn HEE because everyone told me that being a teacher is good for girls because we can look after family better while we have stable jobs. In addition, I really liked my home economics teacher. She was my role model becuase she was fashionable and looked very cool. <br>
 Looking back now I realised that my world was so limited. At that time in Korea, girls were mainly taught home economics but not so much technology or computer science. I graduated girl's middle/high school and I wasn't given options to select computer science in the school's curriculum. I only learned computer science 1 hour a week and only in the 1st grade of middle school while students at the boy's school were learning technology and computer science 3-4 hours a week. <br>
 Now I think I could have had different career path if I was given choices like the boys. Becuase I made my decsion to learn HEE without hesitation despite being offered a place studying civil engineering at a different universitiy.`
 
-const yoga = `When I have some spare time I like doing <b>yoga</b>. As I spend a lot of time sitting to do coding and do my work, I realised that I need to keep balance of my body and proper exercise. I love doing yoga becuase I enjoy the time I can put every thoughts and worries away while I do it. It also keeps my body fit!<br>
+const yoga = `When I have some spare time I like doing yoga. As I spend a lot of time sitting to do coding and do my work, I realised that I need to keep balance of my body and proper exercise. I love doing yoga becuase I enjoy the time I can put every thoughts and worries away while I do it. It also keeps my body fit!<br>
 During lockdown, I found lots of good yoga tutorials on Youtube and follow them regulary and it has been really good. But I can't wait to join a yoga class in a studio!`;
 
 img_seoul.addEventListener('click', () => {
@@ -198,19 +198,32 @@ const gitHubReqBtn = document.querySelector(".github_title");
 
 
 fccReqBtn.addEventListener('click', (e) => {
-  setTimeout(() => {document.querySelector(".fcc_arrow_down1").style.visibility = 'visible'}, 500);
-  setTimeout(() => {document.querySelector(".fcc_arrow_down2").style.visibility = 'visible'}, 1000);
-  setTimeout(() => {document.querySelector(".fcc_arrow_down3").style.visibility = 'visible'}, 1500);
+  setTimeout(() => {document.querySelector(".fcc_arrow_down1").classList.add('arrow_visible')}, 500);
+  setTimeout(() => {document.querySelector(".fcc_arrow_down2").classList.add('arrow_visible')}, 1200);
+  setTimeout(() => {document.querySelector(".fcc_arrow_down3").classList.add('arrow_visible')}, 1900);
+
+  setTimeout(() => {document.querySelector(".fcc_done").classList.add('done_visible')}, 2500);
+
+  setTimeout(() => {document.querySelector(".fcc_req_a").classList.add('a_visible')}, 2500);
+
 });
 
 codeWarsReqBtn.addEventListener('click', (e) => {
-  setTimeout(() => {document.querySelector(".codewars_arrow_down1").style.visibility = 'visible'}, 500);
-  setTimeout(() => {document.querySelector(".codewars_arrow_down2").style.visibility = 'visible'}, 1000);
-  setTimeout(() => {document.querySelector(".codewars_arrow_down3").style.visibility = 'visible'}, 1500);
+  setTimeout(() => {document.querySelector(".codewars_arrow_down1").classList.add('arrow_visible')}, 500);
+  setTimeout(() => {document.querySelector(".codewars_arrow_down2").classList.add('arrow_visible')}, 1200);
+  setTimeout(() => {document.querySelector(".codewars_arrow_down3").classList.add('arrow_visible')}, 1900);
+
+  setTimeout(() => {document.querySelector(".codewars_done").classList.add('done_visible')}, 2500);
+
+  setTimeout(() => {document.querySelector(".codewars_req_a").classList.add('a_visible')}, 2500);
 });
 
 gitHubReqBtn.addEventListener('click', (e) => {
-  setTimeout(() => {document.querySelector(".github_arrow_down1").style.visibility = 'visible'}, 500);
-  setTimeout(() => {document.querySelector(".github_arrow_down2").style.visibility = 'visible'}, 1000);
-  setTimeout(() => {document.querySelector(".github_arrow_down3").style.visibility = 'visible'}, 1500);
+  setTimeout(() => {document.querySelector(".github_arrow_down1").classList.add('arrow_visible')}, 500);
+  setTimeout(() => {document.querySelector(".github_arrow_down2").classList.add('arrow_visible')}, 1200);
+  setTimeout(() => {document.querySelector(".github_arrow_down3").classList.add('arrow_visible')}, 1900);
+
+  setTimeout(() => {document.querySelector(".github_done").classList.add('done_visible')}, 2500);
+
+  setTimeout(() => {document.querySelector(".github_req_a").classList.add('a_visible')}, 2500);
 });
