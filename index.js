@@ -165,7 +165,7 @@ const seoul = `I was born and raised in South Korea. I was a teacher in my home 
 
 const six = `I came to the UK 6 years ago. I had only visited here on holiday a few times so it was a big step for me to relocate and leave my family and friends behind.<br> When I arrived in England, I began to work as a florist, creating floral arrangements for individuals and events.<br> From there I moved to office-based work, researching and creating reports for Korean SMEs to expand their horizons. This has led me to where I am today, creating web applications with aim of helping others to achieve their digital goals while developing my skillset.`;
 
-const study = `I studied Home Economics Education at university in Seoul. I had decided to learn HEE because everyone told me that being a teacher is good for girls because we can look after family better while we have stable jobs. In addition, I really liked my home economics teacher. She was my role model becuase she was fashionable and looked very cool. <br>
+const study = `I studied Home Economics Education at university in Seoul. I had decided to learn HEE because when I was little, everyone told me that being a teacher is good for girls as we can look after family better while we have stable jobs. In addition, I really liked my home economics teacher. She was my role model becuase I thought she was fashionable and looked very cool. <br>
 Looking back now I realised that my world was so limited. At that time in Korea, girls were mainly taught home economics but not so much technology or computer science. I graduated girl's middle/high school and I wasn't given options to select computer science in the school's curriculum. I only learned computer science 1 hour a week and only in the 1st grade of middle school while students at the boy's school were learning technology and computer science 3-4 hours a week. <br>
 Now I think I could have had different career path if I was given choices like the boys. Becuase I made my decsion to learn HEE without hesitation despite being offered a place studying civil engineering at a different universitiy.`
 
@@ -227,3 +227,34 @@ gitHubReqBtn.addEventListener('click', (e) => {
 
   setTimeout(() => {document.querySelector(".github_req_a").classList.add('a_visible')}, 3400);
 });
+
+
+
+
+// why fac
+
+const whyFac = document.querySelector('.why_main');
+
+document.addEventListener('load', loadFlowers());
+
+function loadFlowers() {
+  start('flower', 7, 'media/flower.png');
+}
+
+
+function start(className, count, imgPath) {
+  for(let i = 0; i < count; i++) {
+    const createImg = document.createElement('img');
+    createImg.setAttribute('class', className);
+    createImg.setAttribute('src', imgPath);
+    whyFac.appendChild(createImg);
+  }
+
+}
+
+
+document.addEventListener('load',() => {
+
+
+})
+
