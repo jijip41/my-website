@@ -192,7 +192,12 @@ a:visited {
   height: 180px;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 1px 1px 2px 3px var(--white-color);
+  box-shadow: 1px 1px 3px 4px var(--white-color);
+  opacity: 50%;
+}
+
+.about_img img:hover {
+  opacity: 100%;
 }
 
 .about_text {
