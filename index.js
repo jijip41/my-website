@@ -238,7 +238,7 @@ const whyFac = document.querySelector('.why_main');
 document.addEventListener('load', loadFlowers());
 
 function loadFlowers() {
-  start('flower', 7, '/media/flower.png');
+  start('flower', 7, 'media/flower.png');
 }
 
 
