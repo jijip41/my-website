@@ -228,6 +228,22 @@ padding: 0 0 0 10%;
   display: block;
 }
 
+.flower:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  animation-name: spin;
+  animation-duration: 4000ms;
+}
+
+@keyframes spin {
+  from{
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+
 .requirement_main ul{
   display: flex;
   flex-direction: row;
