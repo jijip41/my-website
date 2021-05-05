@@ -235,45 +235,41 @@ gitHubReqBtn.addEventListener('click', (e) => {
 
 const whyFac = document.querySelector('.why_main');
 const getSize = document.querySelector(".home_main").getBoundingClientRect();
+const flowerSize = 170;
 
-
-document.addEventListener('load', loadFlowers())
+document.addEventListener('click', loadFlowers())
 ;
 
 function loadFlowers() {
   start('flower', 7, 'media/flower.png');
 }
 
+console.log(getSize);
 function start(className, count, imgPath) {
-  const left = 0;
-  const top = 0;
-  const width = getSize.width;
-  const height = getSize.height;
+  const left = getSize.x;
+  const top = getSize.y;
+  const width = getSize.width - flowerSize;
+  const height = getSize.height - flowerSize;
 
   for(let i = 0; i < count; i++) {
 
-    const x = getRandomNum(left, width);
-    const y = getRandomNum(top, height);
+    const flowerX = getRandomNum(left, width);
+    const flowerY = getRandomNum(top, height);
 
     const createImg = document.createElement('img');
     createImg.setAttribute('class', className);
     createImg.setAttribute('src', imgPath);
     createImg.setAttribute('display', 'block');
     
-    createImg.setAttribute('style', `left:${x}px; top:${y}px`);
+    createImg.setAttribute('style', `left:${flowerX}px; top:${flowerY}px`);
     
-
-
-    // createImg.style.left = `${x}px`;
-    // createImg.style.top = `${y}px`;
-
     whyFac.appendChild(createImg);
   }
 
 }
 
 function getRandomNum(min, max){
-  return Math.floor(Math.random() * (max - min) + min);
+  return Math.floor(Math.random() * (max - min + 1) + min);
 
 }
 
