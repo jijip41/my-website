@@ -234,27 +234,47 @@ gitHubReqBtn.addEventListener('click', (e) => {
 // why fac
 
 const whyFac = document.querySelector('.why_main');
+const getSize = document.querySelector(".home_main").getBoundingClientRect();
 
-document.addEventListener('load', loadFlowers());
+
+document.addEventListener('load', loadFlowers())
+;
 
 function loadFlowers() {
   start('flower', 7, 'media/flower.png');
 }
 
-
 function start(className, count, imgPath) {
+  const left = 0;
+  const top = 0;
+  const width = getSize.width;
+  const height = getSize.height;
+
   for(let i = 0; i < count; i++) {
+
+    const x = getRandomNum(left, width);
+    const y = getRandomNum(top, height);
+
     const createImg = document.createElement('img');
     createImg.setAttribute('class', className);
     createImg.setAttribute('src', imgPath);
+    createImg.setAttribute('display', 'block');
+    
+    createImg.setAttribute('style', `left:${x}px; top:${y}px`);
+    
+
+
+    // createImg.style.left = `${x}px`;
+    // createImg.style.top = `${y}px`;
+
     whyFac.appendChild(createImg);
   }
 
 }
 
+function getRandomNum(min, max){
+  return Math.floor(Math.random() * (max - min) + min);
 
-document.addEventListener('load',() => {
+}
 
-
-})
 
