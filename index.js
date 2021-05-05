@@ -274,3 +274,13 @@ function getRandomNum(min, max){
 }
 
 
+document.querySelectorAll('.flower').forEach(e => e.addEventListener('click', () => { e.style.display = 'none';
+
+const createP = document.createElement('p');
+createP.setAttribute('class', 'why_p');
+createP.textContent = "Hello!";
+whyFac.appendChild(createP);
+
+}
+));
+
