@@ -202,9 +202,9 @@ fccReqBtn.addEventListener('click', (e) => {
   setTimeout(() => {document.querySelector(".fcc_arrow_down2").classList.add('arrow_visible')}, 1200);
   setTimeout(() => {document.querySelector(".fcc_arrow_down3").classList.add('arrow_visible')}, 1900);
 
-  setTimeout(() => {document.querySelector(".fcc_done").classList.add('done_visible')}, 3000);
+  setTimeout(() => {document.querySelector(".fcc_done").classList.add('done_visible')}, 2700);
 
-  setTimeout(() => {document.querySelector(".fcc_req_a").classList.add('a_visible')}, 3400);
+  setTimeout(() => {document.querySelector(".fcc_req_a").classList.add('a_visible')}, 3000);
 
 });
 
@@ -213,9 +213,9 @@ codeWarsReqBtn.addEventListener('click', (e) => {
   setTimeout(() => {document.querySelector(".codewars_arrow_down2").classList.add('arrow_visible')}, 1200);
   setTimeout(() => {document.querySelector(".codewars_arrow_down3").classList.add('arrow_visible')}, 1900);
 
-  setTimeout(() => {document.querySelector(".codewars_done").classList.add('done_visible')}, 3000);
+  setTimeout(() => {document.querySelector(".codewars_done").classList.add('done_visible')}, 2700);
 
-  setTimeout(() => {document.querySelector(".codewars_req_a").classList.add('a_visible')}, 3400);
+  setTimeout(() => {document.querySelector(".codewars_req_a").classList.add('a_visible')}, 3000);
 });
 
 gitHubReqBtn.addEventListener('click', (e) => {
@@ -223,9 +223,9 @@ gitHubReqBtn.addEventListener('click', (e) => {
   setTimeout(() => {document.querySelector(".github_arrow_down2").classList.add('arrow_visible')}, 1200);
   setTimeout(() => {document.querySelector(".github_arrow_down3").classList.add('arrow_visible')}, 1900);
 
-  setTimeout(() => {document.querySelector(".github_done").classList.add('done_visible')}, 3000);
+  setTimeout(() => {document.querySelector(".github_done").classList.add('done_visible')}, 2700);
 
-  setTimeout(() => {document.querySelector(".github_req_a").classList.add('a_visible')}, 3400);
+  setTimeout(() => {document.querySelector(".github_req_a").classList.add('a_visible')}, 3000);
 });
 
 
