@@ -248,6 +248,13 @@ padding: 0 0 0 10%;
   }
 }
 
+.why_p {
+  font-size: 12px;
+  margin-top: 20px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
 .requirement_main ul{
   display: flex;
   flex-direction: row;
