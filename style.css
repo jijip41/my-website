@@ -6,6 +6,7 @@
   --green-color: rgb(176, 209, 175);
   --grey-color:  rgb(160, 136, 136);
   --blue-color: rgba(103, 170, 182);
+  --purple-color: rgb(157, 107, 190);
   --white-color: #ffffff;
   --main-background: #fde3e2;
   --font-for-main: #000000;
@@ -253,6 +254,11 @@ padding: 0 0 0 10%;
   margin-top: 20px;
   margin-left: 12px;
   margin-right: 12px;
+  padding: 10px;
+  text-align: justify;
+  background-color: rgba(255, 232, 238, 0.8);
+  border: dashed 1px var(--purple-color);
+  border-radius: 7px;
 }
 
 .requirement_main ul{
