@@ -286,3 +286,13 @@ whyFac.appendChild(createP);
 }
 ));
 
+
+// make logo clickable and reset the page
+
+const logo = document.querySelector(".logo");
+
+logo.addEventListener('click', reloadPage);
+
+function reloadPage() {
+  location.reload();
+}
