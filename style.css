@@ -11,6 +11,8 @@
   --main-background: #fde3e2;
   --font-for-main: #000000;
 }
+
+
 body {
   padding: 0;
   margin: 0;
@@ -133,8 +135,22 @@ a:visited {
   font-weight: 100;
   font-family: var(--type-font-family);
   padding: 0;
-  text-align: center;
-  
+  text-align: center;  
+}
+
+.greeting_button {
+  border-style: none;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: var(--purple-color);
+  color: var(--white-color);
+  cursor: pointer;
+  outline: none;
+}
+
+.greeting_button:hover {
+  transform: scale(1.1);
+  border: none;
 }
 
 .video_container{
