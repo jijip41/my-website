@@ -4,6 +4,7 @@
 
 const greeting_message = "Hello there I'm Jihye I'm looking for a developer job!";
 const greeting_message_container = document.querySelector('.greeting-message');
+const greeting_btn = document.querySelector(".greeting_button"); // greeting button control
 
 let i = 0;
 let strArr = greeting_message.toUpperCase().split('').map(elem => elem == " " ? "_" : elem); //HELLO_
@@ -14,7 +15,7 @@ let forward = true;
 
 function typing() {
 
-  if(forward) {
+  if(forward && greeting_btn.textContent === "Stop") {
     emptyStr += strArr[i];
     greeting_message_container.innerHTML = emptyStr;
     i++;
@@ -24,24 +25,39 @@ function typing() {
       forward = false;
       setTimeout(typing, 80);
     }
-  } else {
+  } else if(greeting_btn.textContent === "Start"){
+    clearTimeout(typing);
+  } else{
     emptyStr = emptyStr.slice(0, -1);
     greeting_message_container.innerHTML = emptyStr;
     i--;
     if(i > 0) {
       setTimeout(typing, 80);
     } else if (i === 0) {
-      greeting_message_container.innerHTML = '&nbsp;';
+      greeting_message_container.innerHTML = '&nbsp;'; // non breaking space
       forward = true;
       setTimeout(typing, 80);
     }
 }
-
-
 }
 
+// greeting control button
+
+
+greeting_btn.addEventListener('click', () => {
+  if(greeting_btn.textContent === "Stop") {
+    greeting_btn.textContent = "Start";
+  } else if(greeting_btn.textContent === "Start") {
+    setTimeout(typing, 80);
+    greeting_btn.textContent = "Stop"; 
+  }
+});
 
 typing();
+
+
+
+
 
 
 // toggle button control
@@ -296,3 +312,4 @@ logo.addEventListener('click', reloadPage);
 function reloadPage() {
   location.reload();
 }
+
