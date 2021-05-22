@@ -71,19 +71,24 @@ btn.addEventListener('click', () => {
 
 const click_home = document.querySelector('.home a');
 const click_about = document.querySelector('.about a');
-const click_pf = document.querySelector('.requirement a');
 const click_why = document.querySelector('.why a');
-const click_roadmap = document.querySelector('.roadmap a');
+const click_pf = document.querySelector('.requirement a');
 const click_contact = document.querySelector('.contact a');
 
 const home_main = document.querySelector('.home_main');
 const about_main = document.querySelector('.about_main');
-const pf_main = document.querySelector('.requirement_main');
 const why_main = document.querySelector('.why_main');
+const pf_main = document.querySelector('.requirement_main');
 const contact_main = document.querySelector('.contact_main');
 
 
 click_home.addEventListener('click', ()=> {
+  click_home.style.borderBottom = `solid 1px #f38181`;
+  click_about.style.borderBottom = `none`;
+  click_why.style.borderBottom = `none`;
+  click_pf.style.borderBottom = `none`;
+  click_contact.style.borderBottom = `none`;
+
   home_main.style.display = 'block';
   about_main.style.display = 'none';
   pf_main.style.display = 'none';
@@ -91,6 +96,12 @@ click_home.addEventListener('click', ()=> {
   contact_main.style.display = 'none';
 })
 click_about.addEventListener('click', ()=> {
+  click_home.style.borderBottom = `none`;
+  click_about.style.borderBottom = `solid 1px #f38181`;
+  click_why.style.borderBottom = `none`;
+  click_pf.style.borderBottom = `none`;
+  click_contact.style.borderBottom = `none`;
+
   home_main.style.display = 'none';
   about_main.style.display = 'block';
   pf_main.style.display = 'none';
@@ -98,6 +109,12 @@ click_about.addEventListener('click', ()=> {
   contact_main.style.display = 'none';
 })
 click_pf.addEventListener('click', ()=> {
+  click_home.style.borderBottom = `none`;
+  click_about.style.borderBottom = `none`;
+  click_why.style.borderBottom = `none`;
+  click_pf.style.borderBottom = `solid 1px #f38181`;
+  click_contact.style.borderBottom = `none`;
+
   home_main.style.display = 'none';
   about_main.style.display = 'none';
   pf_main.style.display = 'block';
@@ -105,6 +122,12 @@ click_pf.addEventListener('click', ()=> {
   contact_main.style.display = 'none';
 })
 click_why.addEventListener('click', ()=> {
+  click_home.style.borderBottom = `none`;
+  click_about.style.borderBottom = `none`;
+  click_why.style.borderBottom = `solid 1px #f38181`;
+  click_pf.style.borderBottom = `none`;
+  click_contact.style.borderBottom = `none`;
+
   home_main.style.display = 'none';
   about_main.style.display = 'none';
   pf_main.style.display = 'none';
@@ -113,6 +136,12 @@ click_why.addEventListener('click', ()=> {
 })
 
 click_contact.addEventListener('click', ()=> {
+  click_home.style.borderBottom = `none`;
+  click_about.style.borderBottom = `none`;
+  click_why.style.borderBottom = `none`;
+  click_pf.style.borderBottom = `none`;
+  click_contact.style.borderBottom = `solid 1px #f38181`;
+
   home_main.style.display = 'none';
   about_main.style.display = 'none';
   pf_main.style.display = 'none';
@@ -189,10 +218,10 @@ function showVideo() {
 
 // "About me" section click & get text
 
-const img_seoul = document.querySelector(".about_img li:nth-child(1)");
-const img_six = document.querySelector(".about_img li:nth-child(2)");
-const img_food = document.querySelector(".about_img li:nth-child(3)");
-const img_cat = document.querySelector(".about_img li:nth-child(4)");
+const img_seoul = document.querySelector(".about_img li:nth-child(1) img");
+const img_six = document.querySelector(".about_img li:nth-child(2) img");
+const img_food = document.querySelector(".about_img li:nth-child(3) img");
+const img_cat = document.querySelector(".about_img li:nth-child(4) img");
 
 
 const about_txt_container = document.querySelector(".about_text_container");
@@ -212,22 +241,43 @@ Now I think I could have had different career path if I was given choices like t
 const yoga = `When I have some spare time I like doing yoga. As I spend a lot of time sitting to do coding and do my work, I realised that I need to keep balance of my body and proper exercise. I love doing yoga becuase I enjoy the time I can put every thoughts and worries away while I do it. It also keeps my body fit! 
 During lockdown, I found lots of good yoga tutorials on Youtube and follow them regulary and it has been really good. But I can't wait to join a yoga class in a studio!`;
 
-img_seoul.addEventListener('click', () => {
+img_seoul.addEventListener('click', (e) => {
   getTxt(seoul);
+  e.target.style.opacity = '100%';
+  img_six.style.opacity = '50%';
+  img_food.style.opacity = '50%';
+  img_cat.style.opacity = '50%';
 })
-img_six.addEventListener('click', () => {
+
+img_six.addEventListener('click', (e) => {
   getTxt(six);
+  e.target.style.opacity = '100%';
+  img_seoul.style.opacity = '50%';
+  img_food.style.opacity = '50%';
+  img_cat.style.opacity = '50%';
 })
-img_food.addEventListener('click', () => {
+img_food.addEventListener('click', (e) => {
   getTxt(study);
+  e.target.style.opacity = '100%';
+  img_seoul.style.opacity = '50%';
+  img_six.style.opacity = '50%';
+  img_cat.style.opacity = '50%';
+
 })
-img_cat.addEventListener('click', () => {
+img_cat.addEventListener('click', (e) => {
   getTxt(yoga);
+  e.target.style.opacity = '100%';
+  img_seoul.style.opacity = '50%';
+  img_six.style.opacity = '50%';
+  img_food.style.opacity = '50%';
+
+
 })
 
 function getTxt(title) {
   about_txt_container.textContent = title;
 }
+
 
 
 // requirements button event
