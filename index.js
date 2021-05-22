@@ -56,10 +56,6 @@ greeting_btn.addEventListener('click', () => {
 typing();
 
 
-
-
-
-
 // toggle button control
 
 const btn = document.querySelector(".bar");
@@ -84,7 +80,6 @@ const home_main = document.querySelector('.home_main');
 const about_main = document.querySelector('.about_main');
 const pf_main = document.querySelector('.requirement_main');
 const why_main = document.querySelector('.why_main');
-const roadmap_main = document.querySelector('.roadmap_main');
 const contact_main = document.querySelector('.contact_main');
 
 
@@ -93,7 +88,6 @@ click_home.addEventListener('click', ()=> {
   about_main.style.display = 'none';
   pf_main.style.display = 'none';
   why_main.style.display = 'none';
-  roadmap_main.style.display = 'none';
   contact_main.style.display = 'none';
 })
 click_about.addEventListener('click', ()=> {
@@ -101,7 +95,6 @@ click_about.addEventListener('click', ()=> {
   about_main.style.display = 'block';
   pf_main.style.display = 'none';
   why_main.style.display = 'none';
-  roadmap_main.style.display = 'none';
   contact_main.style.display = 'none';
 })
 click_pf.addEventListener('click', ()=> {
@@ -109,7 +102,6 @@ click_pf.addEventListener('click', ()=> {
   about_main.style.display = 'none';
   pf_main.style.display = 'block';
   why_main.style.display = 'none';
-  roadmap_main.style.display = 'none';
   contact_main.style.display = 'none';
 })
 click_why.addEventListener('click', ()=> {
@@ -117,23 +109,14 @@ click_why.addEventListener('click', ()=> {
   about_main.style.display = 'none';
   pf_main.style.display = 'none';
   why_main.style.display = 'block';
-  roadmap_main.style.display = 'none';
   contact_main.style.display = 'none';
 })
-click_roadmap.addEventListener('click', ()=> {
-  home_main.style.display = 'none';
-  about_main.style.display = 'none';
-  pf_main.style.display = 'none';
-  why_main.style.display = 'none';
-  roadmap_main.style.display = 'block';
-  contact_main.style.display = 'none';
-})
+
 click_contact.addEventListener('click', ()=> {
   home_main.style.display = 'none';
   about_main.style.display = 'none';
   pf_main.style.display = 'none';
   why_main.style.display = 'none';
-  roadmap_main.style.display = 'none';
   contact_main.style.display = 'block';
 })
 
@@ -141,12 +124,12 @@ click_contact.addEventListener('click', ()=> {
 
 const submit_msg = document.querySelector(".submit_msg");
 
-document.getElementById("submit_btn").addEventListener('submit', (e) => {
-  e.preventDefault();
+document.getElementById("submit_btn").addEventListener('click', () => {
+  
+  alert('Thank you for submitting. I will get back to you shortly.');
 
-  // submit_msg.innerHTML = `Thank you for submitting your query. I will get back to you shortly.`
+
 });
-
 
 
 // connecting video
@@ -168,6 +151,42 @@ video_list[2].addEventListener('click', () => {
 });
 
 
+//arrows eventlistener
+
+const left_arrow = document.querySelector(".left-arrow");
+const right_arrow = document.querySelector(".right-arrow");
+
+let arrowNum = 0;
+
+console.log(arrowNum);
+right_arrow.addEventListener('click', () => {
+  if(arrowNum < 2) {
+    arrowNum++;
+    showVideo();
+  } else if(arrowNum >= 2) {
+    arrowNum = 2;
+  }
+  console.log(arrowNum);
+})
+
+left_arrow.addEventListener('click', () => {
+  if(arrowNum > 0) {
+    arrowNum--;
+    showVideo();
+  } else if(arrowNum <= 0) {
+    arrowNum = 0;
+  }
+  console.log(arrowNum);
+})
+
+function showVideo() {
+  if(arrowNum === 0) return getvideoUrl('media/carrot_game.mp4');
+  if(arrowNum === 1) return getvideoUrl('media/shopping_list.mp4');
+  if(arrowNum === 2) return getvideoUrl('media/coordinates.mp4');
+}
+
+
+
 // "About me" section click & get text
 
 const img_seoul = document.querySelector(".about_img li:nth-child(1)");
@@ -175,17 +194,22 @@ const img_six = document.querySelector(".about_img li:nth-child(2)");
 const img_food = document.querySelector(".about_img li:nth-child(3)");
 const img_cat = document.querySelector(".about_img li:nth-child(4)");
 
+
 const about_txt_container = document.querySelector(".about_text_container");
 
-const seoul = `I was born and raised in South Korea. I was a teacher in my home city of Incheon. While teaching I met my future husband who was working as the only foreign teacher in the school. As he sometimes struggled to understand Korean curture and couldn't find ingredients at the supermarket, I helped him a lot and we became close.<br>After several years together we decided to move to England. So here I am now...`;
+const seoul = `I was born and raised in South Korea. 
+I was a teacher in my home city of Incheon. While teaching I met my future husband who was working as the only foreign teacher in the school. As he sometimes struggled to understand Korean curture and couldn't find ingredients at the supermarket, I helped him a lot and we became close. 
+After several years together we decided to move to England. So here I am now...`;
 
-const six = `I came to the UK 6 years ago. I had only visited here on holiday a few times so it was a big step for me to relocate and leave my family and friends behind.<br> When I arrived in England, I began to work as a florist, creating floral arrangements for individuals and events.<br> From there I moved to office-based work, researching and creating reports for Korean SMEs to expand their horizons. This has led me to where I am today, creating web applications with aim of helping others to achieve their digital goals while developing my skillset.`;
+const six = `I came to the UK 6 years ago. I had only visited here on holiday a few times so it was a big step for me to relocate and leave my family and friends behind. 
+When I arrived in England, I began to work as a florist, creating floral arrangements for individuals and events. 
+From there I moved to office-based work, researching and creating reports for Korean SMEs to expand their horizons. This has led me to where I am today, creating web applications with aim of helping others to achieve their digital goals while developing my skillset.`;
 
-const study = `I studied Home Economics Education at university in Seoul. I had decided to learn HEE because when I was little, everyone told me that being a teacher is good for girls as we can look after family better while we have stable jobs. In addition, I really liked my home economics teacher. She was my role model because I thought she was fashionable and looked very cool. <br>
-Looking back now I realised that my world was so limited. At that time in Korea, girls were mainly taught home economics but not so much technology or computer science. I graduated girl's middle/high school and I wasn't given options to select computer science in the school's curriculum. I only learned computer science 1 hour a week and only in the 1st grade of middle school while students at the boy's school were learning technology and computer science 3-4 hours a week. <br>
+const study = `I studied Home Economics Education at university in Seoul. I had decided to learn HEE because when I was little, everyone told me that being a teacher is good for girls as we can look after family better while we have stable jobs. In addition, I really liked my home economics teacher. She was my role model because I thought she was fashionable and looked very cool. 
+Looking back now I realised that my world was so limited. At that time in Korea, girls were mainly taught home economics but not so much technology or computer science. I graduated girl's middle/high school and I wasn't given options to select computer science in the school's curriculum. I only learned computer science 1 hour a week and only in the 1st grade of middle school while students at the boy's school were learning technology and computer science 3-4 hours a week. 
 Now I think I could have had different career path if I was given choices like the boys. Becuase I made my decsion (very comfortably) to learn HEE without hesitation despite being offered a place studying civil engineering at a different universitiy.`
 
-const yoga = `When I have some spare time I like doing yoga. As I spend a lot of time sitting to do coding and do my work, I realised that I need to keep balance of my body and proper exercise. I love doing yoga becuase I enjoy the time I can put every thoughts and worries away while I do it. It also keeps my body fit!<br>
+const yoga = `When I have some spare time I like doing yoga. As I spend a lot of time sitting to do coding and do my work, I realised that I need to keep balance of my body and proper exercise. I love doing yoga becuase I enjoy the time I can put every thoughts and worries away while I do it. It also keeps my body fit! 
 During lockdown, I found lots of good yoga tutorials on Youtube and follow them regulary and it has been really good. But I can't wait to join a yoga class in a studio!`;
 
 img_seoul.addEventListener('click', () => {
@@ -202,7 +226,7 @@ img_cat.addEventListener('click', () => {
 })
 
 function getTxt(title) {
-  about_txt_container.innerHTML = title;
+  about_txt_container.textContent = title;
 }
 
 
