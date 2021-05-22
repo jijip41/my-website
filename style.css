@@ -173,14 +173,16 @@ a:visited {
   object-fit: cover;
 }
 
+
 .left-arrow {
   position: absolute;
   font-size: 20px;
   top: 50%;
   left: 3%;
-  color: var(--font-for-main);
+  color: var(--white-color);
   z-index: 100;
   cursor: pointer;
+  opacity: 60%;
 }
 
 .right-arrow {
@@ -188,10 +190,17 @@ a:visited {
   font-size: 20px;
   top: 50%;
   right: 3%;
-  color: var(--font-for-main);
+  color: var(--white-color);
   z-index: 100;
   cursor: pointer;
+  opacity: 60%;
 }
+
+.arrow:hover {
+  transform: scale(1.2);
+  opacity: 80%
+}
+
 
 .img_container {
   width: 300px;
@@ -507,4 +516,14 @@ section label {
     object-fit: cover;
   }
   
+  .about_img {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+  }
+
+  .about_img img{
+    width: 25vw;
+    height: 10vh;
+  };
 }
