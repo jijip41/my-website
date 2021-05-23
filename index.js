@@ -340,18 +340,33 @@ gitHubReqBtn.addEventListener('click', (e) => {
 
 const whyContent = ['Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, harum molestias distinctio sapiente sint ex voluptatum unde quam vel. Minus?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, numquam. Facere itaque explicabo voluptate quisquam aliquid laborum? Nam, debitis praesentium reprehenderit aut hic odit corporis? Laudantium quasi, beatae molestiae maiores ad eveniet ratione pariatur molestias doloremque unde dolor adipisci. Consequuntur.', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quia ipsam quisquam sapiente culpa id laborum, maiores aspernatur, fuga iure quidem placeat quibusdam illo veniam fugiat et eaque molestiae officiis.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ad optio, asperiores repellendus inventore deserunt debitis voluptate ducimus magni magnam quo a! Nobis ex, illum itaque id, facere enim saepe porro est molestias animi aliquam nesciunt at accusamus fugit doloribus expedita sequi non veniam! Libero beatae aut reprehenderit nam veniam!', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, harum molestias distinctio sapiente sint ex voluptatum unde quam vel. Minus?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, numquam. Facere itaque explicabo voluptate quisquam aliquid laborum? Nam, debitis praesentium reprehenderit aut hic odit corporis? Laudantium quasi, beatae molestiae maiores ad eveniet ratione pariatur molestias doloremque unde dolor adipisci. Consequuntur.', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quia ipsam quisquam sapiente culpa id laborum, maiores aspernatur, fuga iure quidem placeat quibusdam illo veniam fugiat et eaque molestiae officiis.'];
 
+
 const whyFac = document.querySelector('.why_main');
+const why = document.querySelector('.why');
 const getSize = document.querySelector(".home_main").getBoundingClientRect();
 const flowerSize = 170;
 
-document.addEventListener('click', loadFlowers())
-;
+
+window.addEventListener('load', () => {
+  if(getSize.width > 767) {
+    loadFlowers();
+    document.querySelectorAll('.flower').forEach(elem => elem.addEventListener('click', (e) => { 
+      e.target.style.display = 'none';
+      createElementP();
+    }
+    ));
+  } else {
+    for(let i = 0; i < 7; i++) {
+      createElementP();
+    }
+  }
+})
+
 
 function loadFlowers() {
   start('flower', 7, 'media/flower.png');
 }
 
-console.log(getSize);
 function start(className, count, imgPath) {
   const left = getSize.x;
   const top = getSize.y;
@@ -380,16 +395,12 @@ function getRandomNum(min, max){
 
 }
 
-
-document.querySelectorAll('.flower').forEach(e => e.addEventListener('click', () => { e.style.display = 'none';
-
-const createP = document.createElement('p');
-createP.setAttribute('class', 'why_p');
-createP.textContent = whyContent.pop();
-whyFac.appendChild(createP);
-
+function createElementP () {
+  const createP = document.createElement('p');
+  createP.setAttribute('class', 'why_p');
+  createP.textContent = whyContent.pop();
+  whyFac.appendChild(createP);
 }
-));
 
 
 // make logo clickable and reset the page
