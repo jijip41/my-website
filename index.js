@@ -362,7 +362,6 @@ window.addEventListener('load', () => {
   }
 })
 
-
 function loadFlowers() {
   start('flower', 7, 'media/flower.png');
 }
@@ -387,12 +386,10 @@ function start(className, count, imgPath) {
     
     whyFac.appendChild(createImg);
   }
-
 }
 
 function getRandomNum(min, max){
   return Math.floor(Math.random() * (max - min + 1) + min);
-
 }
 
 function createElementP () {
@@ -413,3 +410,47 @@ function reloadPage() {
   location.reload();
 }
 
+
+// requirement section 
+// mobile respoinsive
+
+const requirementContent = document.querySelector(".requirement_ul1");
+
+removeRequirements();
+createRequirements();
+function removeRequirements() {
+  if(getSize.width < 768) {
+    requirementContent.remove();
+  }
+}
+function createRequirements() {
+  const ul = document.createElement('ul');
+  const p1 = document.createElement('p');
+  p1.setAttribute('class', 'mobile-fcc');
+  const p2 = document.createElement('p');
+  p2.setAttribute('class', 'mobile-codewars');
+  const p3 = document.createElement('p');
+  p3.setAttribute('class', 'github');
+  const button1 = document.createElement('div');
+  button1.setAttribute('class', 'requirement-btn');
+  const button2 = document.createElement('div');
+  button2.setAttribute('class', 'requirement-btn');
+  const button3 = document.createElement('div');
+  button3.setAttribute('class', 'requirement-btn');
+
+
+  p1.textContent = `Check out my FreeCodeCamp`;
+  p2.textContent = `Check out my Codewars`;
+  p3.textContent = `Check out my Gitgub`;
+  button1.textContent = `Click to check`;
+  button2.textContent = `Click to check`;
+  button3.textContent = `Click to check`;
+
+  pf_main.appendChild(ul);
+  pf_main.appendChild(p1);
+  pf_main.appendChild(button1);
+  pf_main.appendChild(p2);
+  pf_main.appendChild(button2);
+  pf_main.appendChild(p3);
+  pf_main.appendChild(button3);
+}
