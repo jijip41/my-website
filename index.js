@@ -154,12 +154,9 @@ click_contact.addEventListener('click', ()=> {
 const submit_msg = document.querySelector(".submit_msg");
 const input = document.querySelectorAll("input");
 const textArea = document.querySelector("textarea");
+const inputArr = Array.from(input);
 
-document.getElementById("submit_btn").addEventListener('click', () => {  
-  
-  alert('Thank you for submitting. I will get back to you shortly.');
-});
-
+console.log(inputArr);
 input.forEach(e => e.addEventListener('focus', ()=>{
   e.value = "";
 }))
@@ -167,6 +164,15 @@ input.forEach(e => e.addEventListener('focus', ()=>{
 textArea.addEventListener('focus', (e)=>{
   e.target.value = "";
 })
+
+document.getElementById("submit_btn").addEventListener('click', () => {  
+    if(inputArr[0].value === "" || inputArr[0].value === "Required" || inputArr[1].value === "" || inputArr[1].value === "Required" || inputArr[2].value === "" || inputArr[2].value === "account@email.com") {
+      alert("Please complete the form");
+    } else {
+      alert('Thank you for submitting. I will get back to you shortly.');
+    }
+});
+
 
 // connecting video
 
