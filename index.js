@@ -152,14 +152,21 @@ click_contact.addEventListener('click', ()=> {
 // Submit event
 
 const submit_msg = document.querySelector(".submit_msg");
+const input = document.querySelectorAll("input");
+const textArea = document.querySelector("textarea");
 
-document.getElementById("submit_btn").addEventListener('click', () => {
+document.getElementById("submit_btn").addEventListener('click', () => {  
   
   alert('Thank you for submitting. I will get back to you shortly.');
-
-
 });
 
+input.forEach(e => e.addEventListener('focus', ()=>{
+  e.value = "";
+}))
+
+textArea.addEventListener('focus', (e)=>{
+  e.target.value = "";
+})
 
 // connecting video
 
