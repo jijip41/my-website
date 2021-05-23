@@ -180,7 +180,7 @@ video_list[2].addEventListener('click', () => {
 });
 
 
-//arrows eventlistener
+//arrows eventlistener / video carousel
 
 const left_arrow = document.querySelector(".left-arrow");
 const right_arrow = document.querySelector(".right-arrow");
@@ -192,8 +192,9 @@ right_arrow.addEventListener('click', () => {
   if(arrowNum < 2) {
     arrowNum++;
     showVideo();
-  } else if(arrowNum >= 2) {
-    arrowNum = 2;
+  } else if(arrowNum === 2) {
+    arrowNum = 0;
+    showVideo();
   }
   console.log(arrowNum);
 })
@@ -202,8 +203,9 @@ left_arrow.addEventListener('click', () => {
   if(arrowNum > 0) {
     arrowNum--;
     showVideo();
-  } else if(arrowNum <= 0) {
-    arrowNum = 0;
+  } else if(arrowNum === 0) {
+    arrowNum = 2;
+    showVideo();
   }
   console.log(arrowNum);
 })
