@@ -256,6 +256,33 @@ Now I think I could have had different career path if I was given choices like t
 const yoga = `When I have some spare time I like doing yoga. As I spend a lot of time sitting to do coding and do my work, I realised that I need to keep balance of my body and proper exercise. I love doing yoga becuase I enjoy the time I can put every thoughts and worries away while I do it. It also keeps my body fit! 
 During lockdown, I found lots of good yoga tutorials on Youtube and follow them regulary and it has been really good. But I can't wait to join a yoga class in a studio!`;
 
+img_seoul.addEventListener('mouseover', (e) => {
+  e.target.style.opacity = '100%';
+})
+img_six.addEventListener('mouseover', (e) => {
+  e.target.style.opacity = '100%';
+})
+img_food.addEventListener('mouseover', (e) => {
+  e.target.style.opacity = '100%';
+})
+img_cat.addEventListener('mouseover', (e) => {
+  e.target.style.opacity = '100%';
+})
+
+img_seoul.addEventListener('mouseleave', (e) => {
+  e.target.style.opacity = '50%';
+})
+img_six.addEventListener('mouseleave', (e) => {
+  e.target.style.opacity = '50%';
+})
+img_food.addEventListener('mouseleave', (e) => {
+  e.target.style.opacity = '50%';
+})
+img_cat.addEventListener('mouseleave', (e) => {
+  e.target.style.opacity = '50%';
+})
+
+
 img_seoul.addEventListener('click', (e) => {
   getTxt(seoul);
   e.target.style.opacity = '100%';
@@ -292,8 +319,6 @@ img_cat.addEventListener('click', (e) => {
 function getTxt(title) {
   about_txt_container.textContent = title;
 }
-
-
 
 // requirements button event
 
