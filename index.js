@@ -430,7 +430,7 @@ function createRequirements() {
   const p2 = document.createElement('p');
   p2.setAttribute('class', 'mobile-codewars');
   const p3 = document.createElement('p');
-  p3.setAttribute('class', 'github');
+  p3.setAttribute('class', 'mobile-github');
   const button1 = document.createElement('div');
   button1.setAttribute('class', 'requirement-btn');
   const button2 = document.createElement('div');
