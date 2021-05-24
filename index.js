@@ -440,7 +440,7 @@ function createRequirements() {
 
   p1.textContent = `Check out my FreeCodeCamp`;
   p2.textContent = `Check out my Codewars`;
-  p3.textContent = `Check out my Gitgub`;
+  p3.textContent = `Check out my Github`;
   button1.innerHTML = `<a href="https://www.freecodecamp.org/jhp" target="_blank">Click to check</a>`;
   button2.innerHTML = `<a href="https://www.codewars.com/users/Jihye_P" target="_blank">Click to check</a>`;
   button3.innerHTML = `<a href="https://github.com/jijip41/my-website" target="_blank">Click to check</a>`;
