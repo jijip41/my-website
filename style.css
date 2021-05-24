@@ -159,7 +159,7 @@ a:visited {
   margin: auto;
   width: 600px;
   height: 400px;
-  margin-top: 50px;
+  margin-top: 30px;
   overflow: hidden;
   box-shadow: 1px 1px 2px 1px black;
 }
@@ -172,7 +172,6 @@ a:visited {
   height: 100%;
   object-fit: cover;
 }
-
 
 .left-arrow {
   position: absolute;
@@ -419,6 +418,29 @@ padding: 0 0 0 10%;
   font-weight: bold;
 }
 
+
+.mobile-fcc,
+.mobile-codewars,
+.mobile-github {
+text-align: center;
+color: var(--pink-color);
+margin-bottom: 20px;
+}
+
+.requirement-btn {
+  width: 30vw;
+  background-color: var(--purple-color);
+  color: var(--white-color);
+  border-radius: 10px;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.requirement-btn a:visited {
+  color: var(--white-color);
+}
+
 .contact_main {
   padding-top: 20px;
 }
@@ -496,6 +518,12 @@ section label {
     color: inherit;
   }
 
+  #main {
+    width: 80vw;
+    height: 80vh;
+  }
+
+  
   .greeting-message{
     font-size: 9px;
   }
