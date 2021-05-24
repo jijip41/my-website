@@ -438,13 +438,12 @@ function createRequirements() {
   const button3 = document.createElement('div');
   button3.setAttribute('class', 'requirement-btn');
 
-
   p1.textContent = `Check out my FreeCodeCamp`;
   p2.textContent = `Check out my Codewars`;
   p3.textContent = `Check out my Gitgub`;
-  button1.textContent = `Click to check`;
-  button2.textContent = `Click to check`;
-  button3.textContent = `Click to check`;
+  button1.innerHTML = `<a href="https://www.freecodecamp.org/jhp" target="_blank">Click to check</a>`;
+  button2.innerHTML = `<a href="https://www.codewars.com/users/Jihye_P" target="_blank">Click to check</a>`;
+  button3.innerHTML = `<a href="https://github.com/jijip41/my-website" target="_blank">Click to check</a>`;
 
   pf_main.appendChild(ul);
   pf_main.appendChild(p1);
