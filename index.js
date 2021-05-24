@@ -256,64 +256,78 @@ Now I think I could have had different career path if I was given choices like t
 const yoga = `When I have some spare time I like doing yoga. As I spend a lot of time sitting to do coding and do my work, I realised that I need to keep balance of my body and proper exercise. I love doing yoga becuase I enjoy the time I can put every thoughts and worries away while I do it. It also keeps my body fit! 
 During lockdown, I found lots of good yoga tutorials on Youtube and follow them regulary and it has been really good. But I can't wait to join a yoga class in a studio!`;
 
-img_seoul.addEventListener('mouseover', (e) => {
-  e.target.style.opacity = '100%';
-})
-img_six.addEventListener('mouseover', (e) => {
-  e.target.style.opacity = '100%';
-})
-img_food.addEventListener('mouseover', (e) => {
-  e.target.style.opacity = '100%';
-})
-img_cat.addEventListener('mouseover', (e) => {
-  e.target.style.opacity = '100%';
-})
+// img_seoul.addEventListener('mouseover', (e) => {
+//   e.target.style.opacity = '100%';
+// })
+// img_six.addEventListener('mouseover', (e) => {
+//   e.target.style.opacity = '100%';
+// })
+// img_food.addEventListener('mouseover', (e) => {
+//   e.target.style.opacity = '100%';
+// })
+// img_cat.addEventListener('mouseover', (e) => {
+//   e.target.style.opacity = '100%';
+// })
 
-img_seoul.addEventListener('mouseleave', (e) => {
-  e.target.style.opacity = '50%';
-})
-img_six.addEventListener('mouseleave', (e) => {
-  e.target.style.opacity = '50%';
-})
-img_food.addEventListener('mouseleave', (e) => {
-  e.target.style.opacity = '50%';
-})
-img_cat.addEventListener('mouseleave', (e) => {
-  e.target.style.opacity = '50%';
-})
+// img_seoul.addEventListener('mouseleave', (e) => {
+//   e.target.style.opacity = '50%';
+// })
+// img_six.addEventListener('mouseleave', (e) => {
+//   e.target.style.opacity = '50%';
+// })
+// img_food.addEventListener('mouseleave', (e) => {
+//   e.target.style.opacity = '50%';
+// })
+// img_cat.addEventListener('mouseleave', (e) => {
+//   e.target.style.opacity = '50%';
+// })
 
+
+const aboutTextContainer = document.querySelector(".about_text_container");
+
+
+function checkContent() {
+  if(aboutTextContainer.textContent === seoul) {
+    img_seoul.style.boxShadow = "1px 2px 3px 4px rgb(157, 107, 190)";
+    img_six.style.boxShadow = "1px 1px 3px 4px #FFFFFF";
+    img_food.style.boxShadow = "1px 1px 3px 4px #FFFFFF";
+    img_cat.style.boxShadow = "1px 1px 3px 4px #FFFFFF";
+
+  } else if(aboutTextContainer.textContent === six) {
+    img_seoul.style.boxShadow = "1px 1px 3px 4px #FFFFFF";
+    img_six.style.boxShadow = "1px 2px 3px 4px rgb(157, 107, 190)";
+    img_food.style.boxShadow = "1px 1px 3px 4px #FFFFFF";
+    img_cat.style.boxShadow = "1px 1px 3px 4px #FFFFFF";
+  } else if(aboutTextContainer.textContent === study) {
+    img_seoul.style.boxShadow = "1px 1px 3px 4px #FFFFFF";
+    img_six.style.boxShadow = "1px 1px 3px 4px #FFFFFF";
+    img_food.style.boxShadow = "1px 2px 3px 4px rgb(157, 107, 190)";
+    img_cat.style.boxShadow = "1px 1px 3px 4px #FFFFFF";
+  } else if(aboutTextContainer.textContent === yoga) {
+    img_seoul.style.boxShadow = "1px 1px 3px 4px #FFFFFF";
+    img_six.style.boxShadow = "1px 1px 3px 4px #FFFFFF";
+    img_food.style.boxShadow = "1px 1px 3px 4px #FFFFFF";
+    img_cat.style.boxShadow = "1px 2px 3px 4px rgb(157, 107, 190)";
+  }
+}
 
 img_seoul.addEventListener('click', (e) => {
   getTxt(seoul);
-  e.target.style.opacity = '100%';
-  img_six.style.opacity = '50%';
-  img_food.style.opacity = '50%';
-  img_cat.style.opacity = '50%';
+  checkContent();
 })
 
 img_six.addEventListener('click', (e) => {
   getTxt(six);
-  e.target.style.opacity = '100%';
-  img_seoul.style.opacity = '50%';
-  img_food.style.opacity = '50%';
-  img_cat.style.opacity = '50%';
+  checkContent();
+
 })
 img_food.addEventListener('click', (e) => {
   getTxt(study);
-  e.target.style.opacity = '100%';
-  img_seoul.style.opacity = '50%';
-  img_six.style.opacity = '50%';
-  img_cat.style.opacity = '50%';
-
+  checkContent();
 })
 img_cat.addEventListener('click', (e) => {
   getTxt(yoga);
-  e.target.style.opacity = '100%';
-  img_seoul.style.opacity = '50%';
-  img_six.style.opacity = '50%';
-  img_food.style.opacity = '50%';
-
-
+  checkContent();
 })
 
 function getTxt(title) {

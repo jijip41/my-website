@@ -131,6 +131,15 @@ a:visited {
   height: 80vh;
 }
 
+
+.home_instruction,
+.why_instruction {
+  color: var(--pink-color);
+  font-family: var(--main-font-family);
+  text-align: center;
+  font-size: 16px;
+}
+
 .home_main {
   font-weight: 100;
   font-family: var(--type-font-family);
@@ -242,6 +251,10 @@ a:visited {
   cursor: pointer;
   box-shadow: 1px 1px 3px 4px var(--white-color);
   opacity: 50%;
+}
+
+.about_img1 img:hover {
+  opacity: 100%;
 }
 
 .about_text {
@@ -508,6 +521,7 @@ section label {
 
     display: flex;
   }
+
   .bar {
     position: absolute;
     right: 20px;
@@ -519,7 +533,6 @@ section label {
     height: 80vh;
   }
 
-  
   .greeting-message{
     font-size: 9px;
   }
@@ -528,6 +541,13 @@ section label {
     font-size: 12px;
   }
   
+  .home_instruction {
+    font-size: 12px;
+  }
+
+  .why_instruction{
+    display: none;
+  }
   .video_container{
     position: relative;
     margin: auto;
