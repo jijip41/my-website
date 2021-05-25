@@ -506,6 +506,8 @@ section label {
     width: 100%;
     font-size: 12px;
     background: transparent;
+    transition: transform 0.7s;
+
   }
 
   .nav_lists {
@@ -518,18 +520,17 @@ section label {
     text-align: center;
   }
   .socialnetwork {
-    display: block;
+    display: none;
     margin: auto;  
   }
   
   .bar {
     display: block;
   }
-  .nav_container.nav_active {
-    transition: transform 0.7s;
 
-    display: flex;
-  }
+  .nav_active {
+    display: block;
+  } 
 
   .bar {
     position: absolute;

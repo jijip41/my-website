@@ -60,10 +60,13 @@ typing();
 
 const btn = document.querySelector(".bar");
 const nav = document.querySelector(".nav_container");
+const socialnetwork = document.querySelector(".socialnetwork");
 
 btn.addEventListener('click', () => {
   nav.classList.toggle("nav_active");
+  socialnetwork.classList.toggle("nav_active");
 })
+
 
 
 
