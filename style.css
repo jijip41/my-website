@@ -250,6 +250,13 @@ a:visited {
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 1px 1px 3px 4px var(--white-color);
+}
+
+.opacity-one {
+  opacity: 100%;
+}
+
+.opacity-two {
   opacity: 50%;
 }
 
