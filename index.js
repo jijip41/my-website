@@ -300,9 +300,9 @@ img_seoul.addEventListener('click', (e) => {
   img_six.classList.remove("opacity-one");
   img_food.classList.remove("opacity-one");
   img_cat.classList.remove("opacity-one");
-  img_six.classList.add("opacity-add");
-  img_food.classList.add("opacity-add");
-  img_cat.classList.add("opacity-add");
+  img_six.classList.add("opacity-two");
+  img_food.classList.add("opacity-two");
+  img_cat.classList.add("opacity-two");
 })
 
 img_six.addEventListener('click', (e) => {
@@ -324,7 +324,7 @@ img_food.addEventListener('click', (e) => {
   img_seoul.classList.remove("opacity-one");
   img_six.classList.remove("opacity-one");
   img_cat.classList.remove("opacity-one");
-  img_seoul.classList.add("opacity-one");
+  img_seoul.classList.add("opacity-two");
   img_six.classList.add("opacity-two");
   img_cat.classList.add("opacity-two");
 })
