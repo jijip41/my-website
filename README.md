@@ -3,7 +3,7 @@ This is the website I created to apply for the Founders and Coders 2021 Autumn c
 
 I've been learning to code from scratch, following FreeCodeCamp online curriculum and many other tutorials and documents available online. I also practiced to improve my JavaScript knowledge by regularly completing katas on Codewars. Most importantly, I've met amazing people through the FAC's community and we've been supporting each other through our journey's to become developers. So I highly recommend it if you're in a similar situation.
 
-⭐️⭐️Please note that if you're trying to see a mobile version of the page, you might need to refresh your browser.⭐️⭐️
+⭐️⭐️⭐️⭐️⭐️⭐️Please note that if you're trying to see a mobile version of the page, you might need to refresh your browser.⭐️⭐️⭐️⭐️⭐️⭐️
 
 The website is a one page design and you can jump around different sections by clicking the nav menu. The menu includes 5 sections:
 
