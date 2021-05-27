@@ -177,24 +177,6 @@ document.getElementById("submit_btn").addEventListener('click', () => {
 });
 
 
-// connecting video
-
-const video_list = document.querySelectorAll('.video_nav img');
-
-function getvideoUrl(url) {
-  document.getElementById('video_carousel').src = url;
-}
-
-video_list[0].addEventListener('click', () => {
-  getvideoUrl('media/carrot_game.mp4');
-});
-video_list[1].addEventListener('click', () => {
-  getvideoUrl('media/shopping_list.mp4');
-});
-video_list[2].addEventListener('click', () => {
-  getvideoUrl('media/coordinates.mp4');
-});
-
 
 //arrows eventlistener / video carousel
 
@@ -203,7 +185,6 @@ const right_arrow = document.querySelector(".right-arrow");
 
 let arrowNum = 0;
 
-console.log(arrowNum);
 right_arrow.addEventListener('click', () => {
   if(arrowNum < 2) {
     arrowNum++;
@@ -231,6 +212,28 @@ function showVideo() {
   if(arrowNum === 1) return getvideoUrl('media/shopping_list.mp4');
   if(arrowNum === 2) return getvideoUrl('media/coordinates.mp4');
 }
+
+// connecting video
+
+const video_list = document.querySelectorAll('.video_nav img');
+
+function getvideoUrl(url) {
+  document.getElementById('video_carousel').src = url;
+}
+
+video_list[0].addEventListener('click', () => {
+  getvideoUrl('media/carrot_game.mp4');
+  arrowNum = 0;
+});
+video_list[1].addEventListener('click', () => {
+  getvideoUrl('media/shopping_list.mp4');
+  arrowNum = 1;
+});
+video_list[2].addEventListener('click', () => {
+  getvideoUrl('media/coordinates.mp4');
+  arrowNum = 2;
+});
+
 
 
 
