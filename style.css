@@ -105,6 +105,7 @@ a:visited {
 
 .day_night_switch {
   background-color: black;
+  color: var(--white-color);
 }
 
 .socialnetwork {
