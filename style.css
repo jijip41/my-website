@@ -244,7 +244,7 @@ a:visited {
   height: 60px;
   cursor: pointer;
   border: solid 1px var(--white-color);
-  transition: 0.5s ;
+  transition: 0.5s;
 }
 
 .img_container img:hover{
