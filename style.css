@@ -311,7 +311,7 @@ padding: 0 0 0 10%;
 }
 
 .why_p {
-  font-size: 12px;
+  font-size: 16px;
   margin-top: 20px;
   margin-left: 12px;
   margin-right: 12px;
@@ -611,4 +611,8 @@ section label {
     color: var(--white-color);
   }
 
+
+  .why_p {
+    font-size: 12px;
+  }
 }
