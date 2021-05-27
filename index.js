@@ -507,3 +507,17 @@ function createRequirements() {
   pf_main.appendChild(p3);
   pf_main.appendChild(button3);
 }
+
+
+// day night version button
+
+const day_night = document.querySelector(".day_night_button");
+
+day_night.addEventListener('click', () => {
+  document.body.classList.toggle("day_night_switch")
+  if(day_night.textContent === "Night") {
+    day_night.textContent = "Day";
+  } else if(day_night.textContent === "Day"){
+    day_night.textContent = "Night";
+  }
+})
