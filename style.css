@@ -187,7 +187,6 @@ a:visited {
   height: 400px;
   margin-top: 30px;
   overflow: hidden;
-  box-shadow: 1px 1px 2px 1px black;
 }
 
 .video_container video {
