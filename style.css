@@ -1,12 +1,12 @@
 :root {
   --main-font-family: 'Noto Sans JP', sans-serif;
   --type-font-family: 'Frank Ruhl Libre', serif;
-  --pink-color: #f38181;
-  --yellow-color: hsl(47, 95%, 76%);
+  --pink-color: #EDADAD;
+  --yellow-color: #151326;
   --green-color: rgb(176, 209, 175);
   --grey-color:  rgb(160, 136, 136);
   --blue-color: rgba(103, 170, 182);
-  --purple-color: rgb(157, 107, 190);
+  --purple-color: #5F2584;
   --white-color: #ffffff;
   --main-background: #fde3e2;
   --font-for-main: #000000;
@@ -93,7 +93,7 @@ a:visited {
 .day_night_button {
   background-color: var(--pink-color);
   border-style: none;
-  color: var(--white-color);
+  color: var(--font-for-main);
   cursor: pointer;
   outline:none;
   border-radius: 3px;
@@ -152,7 +152,7 @@ a:visited {
 
 .home_instruction,
 .why_instruction {
-  color: var(--pink-color);
+  color: var(--font-for-main);
   font-family: var(--main-font-family);
   text-align: center;
   font-size: 16px;

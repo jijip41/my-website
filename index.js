@@ -124,7 +124,7 @@ click_contact.addEventListener('click', ()=> {
 // typing function
 
 const greeting_message = "Hello there I'm Jihye I'm looking for a developer job!";
-const greeting_message_container = document.querySelector('.greeting-message');
+const greeting_message_container = document.querySelector('.greeting-message'); //p tag
 const greeting_btn = document.querySelector(".greeting_button"); // greeting button control
 
 let i = 0;
@@ -148,7 +148,7 @@ function typing() {
     }
   } else if(greeting_btn.textContent === "Start"){
     clearTimeout(typing);
-  } else{
+  } else {
     emptyStr = emptyStr.slice(0, -1);
     greeting_message_container.innerHTML = emptyStr;
     i--;
@@ -496,7 +496,7 @@ input.forEach(e => e.addEventListener('focus', ()=>{
 
 textArea.addEventListener('focus', (e)=>{
   e.target.value = "";
-})
+}) 
 
 document.getElementById("submit_btn").addEventListener('click', () => {  
     if(inputArr[0].value === "" || inputArr[0].value === "Required" || inputArr[1].value === "" || inputArr[1].value === "Required" || inputArr[2].value === "" || inputArr[2].value === "account@email.com") {
